@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cicd-test.iml" filepath="$PROJECT_DIR$/.idea/cicd-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cicd.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cicd.main.iml" />
     </modules>
   </component>
 </project>
