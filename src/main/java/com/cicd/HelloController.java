@@ -13,6 +13,6 @@ public class HelloController {
 
     @GetMapping("/bye")
     public String Bye() {
-        return "Bye, World!";
+        return "Bye, World! JENKINS";
     }
 }
