@@ -1,6 +1,6 @@
 
 # 멀티스테이지 빌드를 사용하여 빌드 환경과 실행 환경을 분리
-FROM eclipse-temurin:21-jdk AS builder  # 17 → 21 변경
+FROM eclipse-temurin:21-jdk AS builder
 
 # 작업 디렉토리 설정
 WORKDIR /app
