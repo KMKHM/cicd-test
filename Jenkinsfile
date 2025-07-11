@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // 트리거 추가
+    triggers {
+        githubPush()
+    }
+
     environment {
         REGISTRY = 'ghcr.io'
         IMAGE_NAME = 'kmkhm/my-java-image'
@@ -36,7 +41,8 @@ pipeline {
             }
             post {
                 always {
-                    publishTestResults testResultsPattern: 'build/test-results/test/*.xml'
+                    // publishTestResults 대신 junit 사용
+                    junit testResultsPattern: 'build/test-results/test/*.xml', allowEmptyResults: true
                 }
             }
         }
