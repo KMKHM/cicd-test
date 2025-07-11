@@ -41,8 +41,8 @@ pipeline {
             }
             post {
                 always {
-                    // publishTestResults 대신 junit 사용
-                    junit testResultsPattern: 'build/test-results/test/*.xml', allowEmptyResults: true
+                    // testResultsPattern → testResults로 수정
+                    junit testResults: 'build/test-results/test/*.xml', allowEmptyResults: true
                 }
             }
         }
