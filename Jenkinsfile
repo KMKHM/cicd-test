@@ -88,18 +88,19 @@ pipeline {
             cleanWs()
         }
         success {
-            echo '''
-            🎉 파이프라인 성공!
-            ✅ 빌드 완료
-            ✅ 테스트 통과
-            ✅ 이미지 푸시 완료
-
-            🚀 배포하려면 다음 명령어 실행:
-            kubectl rollout restart deployment cicd-test-app -n backend
-            '''
+          slackSend(
+            channel: '#deployment',
+            message: "배포 성공! - ${env.JOB_NAME}",
+            color: 'good'
+          )
         }
         failure {
-            echo '❌ 파이프라인 실패!'
+          slackSend(
+            channel: '#deployment',
+            message: "배포 실패 - ${env.JOB_NAME}",
+            color: 'danger'
+          )
         }
+
     }
 }
