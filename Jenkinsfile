@@ -90,17 +90,16 @@ pipeline {
         success {
           slackSend(
             channel: '#deployment',
-            message: "배포 성공! - ${env.JOB_NAME}",
+            message: "빌드 성공! - ${env.JOB_NAME}",
             color: 'good'
           )
         }
         failure {
           slackSend(
             channel: '#deployment',
-            message: "배포 실패 - ${env.JOB_NAME}",
+            message: "빌드 실패 - ${env.JOB_NAME}",
             color: 'danger'
           )
         }
-
     }
 }
