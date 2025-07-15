@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World! JENKINS END, Please~~~!!";
+        return "JENKINS END, Please~~~!!";
     }
 
     @GetMapping("/bye")
     public String Bye() {
-        return "Bye, World! JENKINS END, Please~~~`!!";
+        return "JENKINS END, Please~~~!!";
     }
 }
