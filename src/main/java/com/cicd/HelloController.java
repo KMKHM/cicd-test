@@ -14,4 +14,9 @@ public class HelloController {
     public String Bye() {
         return "ARGO END~~~@@@~~~~제발!!, Please2~~~!!";
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "TEST";
+    }
 }
